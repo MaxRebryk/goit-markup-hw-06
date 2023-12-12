@@ -907,5 +907,21 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 
                 /* Portfolio Tablet */
 
+@media screen and (min-width: 768px){
+    .portfolio-list {
+        flex-direction: row;
+        column-gap: 24px;
+        row-gap: 72px;
+        justify-content: center;
+        
+    }
+
+    .portfolio-item{
+        width: 40%;
+    }
+
+    
+
+}
                 
                 /* Portfolio Desktop */

@@ -454,16 +454,25 @@ h3 {
                 
 .first {
     color: #FFFFFF;                            
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/people-office-mobile@1.jpg);
     padding: 188px 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: #2E2F42;
-    max-width: 1440px;
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 96px;
 
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+    .first {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office-mobile@2.jpg");
+    }
 }
                 
 .first::after {

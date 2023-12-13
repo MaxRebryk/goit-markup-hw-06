@@ -1067,7 +1067,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 .footer-form-content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 
 .footer-email-input {

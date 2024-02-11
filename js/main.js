@@ -1,31 +1,27 @@
 "use strict";
 
-// Функция открытия/закрытия бэкдропа
+// Функция открытия/закрытия
 
-const toggleBackdrop = () => {
-    const backdrop = document.querySelector(".backdrop")
-    backdrop.classList.toggle("is-open");
+const toggle = (toggleItemClass) => {
+    const toggleItemName = document.querySelector(toggleItemClass)
+    toggleItemName.classList.toggle("is-open");
 }
 
-// Кнопки заказать услуги и закрыть форму
+// Функция получения кнопки и добавления слушателя на нее
 
-const orderButton = document.querySelector(".button-order");
-orderButton.addEventListener("click",toggleBackdrop);
-
-const closeBackdropButton = document.querySelector(".close-btn");
-
-closeBackdropButton.addEventListener("click",toggleBackdrop);
-
-// Функция открытия/закрытия меню
-
-const toggleMenu = () => {
-    const menu = document.querySelector(".mobile-menu-backdrop")
-    menu.classList.toggle("is-open");
+const getAndAddbutton = (classButton,func) => {
+    const nameButton = document.querySelector(classButton);
+    nameButton.addEventListener("click",func);
 }
-// Кнопки открытия/закрытия мобильного меню
 
-const openMobileMenuButton = document.querySelector(".menu-btn");
-openMobileMenuButton.addEventListener("click",toggleMenu)
+// Добавления функции переключателя в константы
 
-const closeMobileMenuButton = document.querySelector(".close-menu-btn");
-closeMobileMenuButton.addEventListener("click",toggleMenu);
+const backDroptoggle = () => toggle(".mobile-menu-backdrop");
+const mobileMenuToggle = () => toggle(".backdrop");
+
+getAndAddbutton(".menu-btn",backDroptoggle);
+getAndAddbutton(".close-menu-btn",backDroptoggle);
+getAndAddbutton(".button-order",mobileMenuToggle);
+getAndAddbutton(".close-btn",mobileMenuToggle);
+
+
